@@ -58,10 +58,11 @@ class LoadAll extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (this.props.year !== prevProps.year)
+        if (this.props.year !== prevProps.year) {
             this.fetchTopTracks();
             this.fetchMovies();
             this.fetchTV();
+        }
     }
 
     renderTopSongs() {
