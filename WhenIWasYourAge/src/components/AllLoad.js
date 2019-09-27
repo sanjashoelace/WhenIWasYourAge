@@ -132,15 +132,15 @@ class LoadAll extends React.Component {
 
             ) 
         
-        // } else if (!this.state.movies.length || !this.state.tv.length || !this.state.songs.length) {
-        //     return (
-        //         <div className="loading">
-        //             <ReactLoading className='center' type={'spinningBubbles'} color={'blue'} height={'50px'} width={'50px'} />
-        //         </div>
-        //     )
-        // }
+            } else if (!this.state.movies.length || !this.state.tv.length || !this.state.songs.length) {
+                return (
+                    <div className="loading">
+                        <ReactLoading className='center' type={'spinningBubbles'} color={'blue'} height={'50px'} width={'50px'} />
+                    </div>
+                )
+            }
 
-            } return (
+            return (
             <div className="outter tall">
                 <div className="clearfix scroll">
                     <div className="movies lists">
