@@ -1,7 +1,7 @@
 {
   "name": "my-app-name",
-  "version": "0.1.0",
-  "private": false,
+  "version": "0.1.1",
+  "private": true,
   "homepage": "https://sanjashoelace.github.io/WhenIWasYourAge",
   "dependencies": {
     "axios": "^0.19.0",
@@ -12,12 +12,12 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
