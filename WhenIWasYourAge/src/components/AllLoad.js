@@ -33,7 +33,7 @@ class LoadAll extends React.Component {
 
     async fetchMovies() {
         try {
-            const movies = await axios.get('https://api.themoviedb.org/3/discover/movie', { params: { 'api_key': `${MOVIE_DB_API_KEY}`, 'language':'en-US', 'sort_by':'popularity.desc','include_adult':false , 'include_video':false , 'page':1 , 'year': 2000 , 'with_original_language':'en'}
+            const movies = await axios.get('https://api.themoviedb.org/3/discover/movie', { params: { 'api_key': `${MOVIE_DB_API_KEY}`, 'language':'en-US', 'sort_by':'popularity.desc','include_adult':false , 'include_video':false , 'page':1 , 'year': `${this.props.year}` , 'with_original_language':'en'}
             })
         this.setState({
             movies: movies.data.results
