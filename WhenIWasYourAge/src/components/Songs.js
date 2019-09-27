@@ -14,7 +14,7 @@ class Songs extends React.Component {
 
     async fetchTopTracks() {
         try {
-            const songs = await axios.get('http://ws.audioscrobbler.com/2.0/?method=tag.getTopTracks', { params: {
+            const songs = await axios.get('https://ws.audioscrobbler.com/2.0/?method=tag.getTopTracks', { params: {
                 'api_key': `${LAST_FM_API_KEY}`, 'tag': `${this.props.year}`, 'limit': 10, 'page': 1, 'format': 'json'
 
             }})
